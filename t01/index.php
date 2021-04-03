@@ -68,20 +68,18 @@
                 <input type="submit" name="btn4" value="SEND"></p>
         </form>
     <? } else {
-        $arr = [
-            "name:" => $_POST["real_name"],
-            "alias" => $_POST["superhero_name"],
-            "age" => $_POST["age"],
-            "description" => $_POST["description"],
-            "photo" => $_POST["choose_file"],
-            "powers" => count($_POST["btn1"]),
-            "level: " => $_POST["slider"],
-            "purpose: " => $_POST["btn2"]
-        ]; foreach($arr as $elem) echo "<p>$elem</p>";?>
+        echo "<p>name: ".$_POST["real_name"]."</p>";
+        echo "<p>alias: ".$_POST["superhero_name"]."</p>";
+        echo "<p>age: ".$_POST["age"]."</p>";
+        echo "<p>description: ".$_POST["description"]."</p>";
+        echo "<p>photo: ".$_POST["choose_file"]."</p>";
+        echo "<p>powers: ".count($_POST["btn1"])."</p>";
+        echo "<p>level: ".$_POST["slider"]."</p>";
+        echo "<p>purpose: ".$_POST["btn2"]."</p>" ?>
         <form action="index.php" method="post">
-            <input type="reset" name="btn5" value="FORGET"></p>
-            <? if(isset($_POST["btn5"])) session_destroy(); ?>
+            <button type="submit" name="btn5" value="FORGET">FORGET</p>
         </form>
-    <? } ?>
+        <? if(isset($_POST["btn5"])) session_destroy();
+    } ?>
 </body>
 </html>
