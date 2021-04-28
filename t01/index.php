@@ -14,8 +14,7 @@
     }
     .pubilicity label{
         text-transform: capitalize;
-    }
-}
+    }   
 </style>
 <body>
     <h1>Session for new</h1>
